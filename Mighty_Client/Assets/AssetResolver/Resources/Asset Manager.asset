@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920a4e2760d420c40b10772695b93e4c, type: 3}
+  m_Name: Asset Manager
+  m_EditorClassIdentifier: 
+  UseResources: 1
+  UseAddressables: 1
+  resourcesPathList:
+  - Assets/Resources/Auto/Built In
+  - Assets/Resources/Auto/Built In/AudioMixer.mixer
+  - Assets/Resources/Auto/Built In/SoundPlayer.prefab

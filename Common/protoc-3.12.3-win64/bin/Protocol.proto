@@ -1,0 +1,43 @@
+syntax = "proto3";
+package Protocol;
+
+import "UnityProtocol.proto";
+import "GameProtocol.proto";
+option csharp_namespace = "Google.Protobuf.Protocol";
+
+enum MsgId
+{
+	S_LOGIN = 0;
+	C_LOGIN = 1;
+	S_ERROR = 2;
+
+	S_ENTER_LOBBY = 10;
+	S_LEAVE_LOBBY = 11;
+	C_CREATE_ROOM = 12;
+	S_CREATE_ROOM = 13;
+	C_CONNECT_ROOM = 14;
+	S_CONNECT_ROOM = 15;
+	C_LEAVE_ROOM = 16;
+	S_LEAVE_ROOM = 17;
+	S_DISCONNECT_PLAYER = 18;
+	C_JOB_CHOICE = 19;
+	S_JOB_CHOICE = 20;
+
+	C_ENTER_GAME = 100;
+	S_ENTER_GAME = 101;
+	S_LEAVE_GAME = 102;
+
+	S_SPAWN_PLAYER = 151;
+	S_DESPAWN_PLAYER = 152;
+	C_MOVE_PLAYER = 153;
+	S_MOVE_PLAYER = 154;
+	C_JUMP_PLAYER = 155;
+	S_JUMP_PLAYER = 156;
+	C_ATTACK_PLAYER = 157;
+	S_ATTACK_PLAYER = 158;
+	C_RELOAD_PLAYER = 159;
+
+	S_SPAWN_PROJECTILE = 200;
+	S_MOVE_PROJECTILE = 201;
+	S_DESPAWN_PROJECTILE = 202;
+}

@@ -1,0 +1,43 @@
+syntax = "proto3";
+package Protocol;
+
+import "UnityProtocol.proto";
+
+option csharp_namespace = "Google.Protobuf.GameProtocol";
+
+enum RoomType
+{
+	R_NONE = 0;
+	R_LOBBY = 1;
+	R_FIELD = 2;
+}
+
+enum JobType
+{
+	JOB_NONE = 0;
+	PISTOLMASTER = 1;
+	MACHINEGUNNER = 2;
+	TANKER = 3;
+	POTIONIST = 4;
+}
+
+enum UnitStateType
+{
+	STATE_NONE = 0;
+	STATE_IDLE = 1;
+	STATE_RUN = 2;
+	STATE_WALK = 3;
+	STATE_JUMP = 4;
+	STATE_DODGE = 5;
+	STATE_RELOAD = 6;
+	STATE_ATTACK = 7;
+}
+
+message P_Unit{
+	JobType job = 1;
+	UnitStateType stateType = 2;
+	P_GameObject gameObject = 3;
+}
+
+
+

@@ -1,0 +1,81 @@
+syntax = "proto3";
+package Protocol;
+
+import "UnityProtocol.proto";
+import "GameProtocol.proto";
+option csharp_namespace = "Google.Protobuf.Protocol";
+
+message C_Login
+{
+	
+}
+
+message S_Login
+{
+	int32 playerId = 1;
+	string nickName = 2;
+}
+
+message S_Error
+{
+	string message = 1;
+}
+
+message S_EnterLobby
+{
+	
+}
+
+message S_LeaveLobby
+{
+
+}
+
+message C_CreateRoom
+{
+}
+
+message S_CreateRoom
+{
+	int32 roomId = 1;
+	int32 maxPlayerCount = 2;
+	int32 playerId = 3;
+}
+
+message C_ConnectRoom
+{
+	int32 roomId = 1;
+}
+
+message S_ConnectRoom
+{
+	int32 playerNumber = 1;
+	bool isFirst = 2;
+	int32 maxPlayerCount = 3;
+	repeated string nickNameList = 4;
+}
+
+message C_LeaveRoom
+{
+
+}
+
+message S_LeaveRoom
+{
+
+}
+
+message S_DisconnectPlayer
+{
+	int32 disconnectPlayerId = 1;
+}
+
+message C_JobChoice
+{
+	JobType job = 1;
+}
+
+message S_JobChoice
+{
+	JobType job = 1;
+}

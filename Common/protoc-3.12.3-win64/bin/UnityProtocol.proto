@@ -1,0 +1,70 @@
+syntax = "proto3";
+package Protocol;
+
+option csharp_namespace = "Google.Protobuf.UnityProtocol";
+
+enum ObjectTag 
+{
+	TAG_NONE = 0;
+	TAG_PLAYER = 1;
+	TAG_MONSTER = 2;
+	TAG_PROJECTILE = 3;
+}
+
+message P_GameObject
+{
+	int32 id = 1;
+	string name = 2;
+	ObjectTag tag = 3;
+	P_Transform transform = 4;
+}
+
+message P_Transform
+{
+	P_Vector3 position = 1;
+	P_Quaternion rotation = 2;
+	P_Vector3 scale = 3;
+}
+
+message P_Vector3
+{
+	float x = 1;
+	float y = 2;
+	float z = 3;
+}
+
+message P_Vector2
+{
+	float x = 1;
+	float y = 2;
+}
+
+message P_Quaternion
+{
+	float x = 1;
+	float y = 2;
+	float z = 3;
+	float w = 4;
+}
+
+message P_AddForce
+{
+	P_Vector3 force = 1;
+	P_ForceMode mode = 2;
+}
+
+message P_BoxCollider
+{
+	P_Vector3 center = 1;
+	P_Quaternion rotation = 2;
+	P_Vector3 scale = 3;
+}
+
+enum P_ForceMode
+{
+	FORCE = 0;
+	ACCELERATION = 1;
+	IMPULSE = 2;
+	VELOCITYCHANGE = 3;
+}
+

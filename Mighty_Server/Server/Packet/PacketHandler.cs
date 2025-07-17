@@ -41,21 +41,6 @@ class PacketHandler
         room.Push(room.LeaveGameRoom, clientSession);
     }
 
-    public static void C_JobChoiceHandler(PacketSession session, IMessage packet)
-    {
-        C_JobChoice jobChoicePacket = packet as C_JobChoice;
-        ClientSession clientSession = session as ClientSession;
-
-        Player player = clientSession.MyPlayer;
-        if (player == null)
-            return;
-        R_Game room = clientSession.MyPlayer.Room;
-        if (room == null)
-            return;
-
-        room.Push(room.SetPlayerJob, jobChoicePacket.Job, player);
-    }
-
     public static void C_EnterGameHandler(PacketSession session, IMessage packet)
     {
         C_EnterGame gamePacket = packet as C_EnterGame;
@@ -68,50 +53,6 @@ class PacketHandler
         room.Push(room.StartGame);
     }
 
-    public static void C_MovePlayerHandler(PacketSession session, IMessage packet)
-	{
-        C_MovePlayer movePacket = packet as C_MovePlayer;
-		ClientSession clientSession = session as ClientSession;
-
-        Player player = clientSession.MyPlayer;
-        if (player == null)
-            return;
-        R_Game room = clientSession.MyPlayer.Room;
-        if (room == null)
-            return;
-
-        room.Push(room.HandleMove, player, movePacket);
-    }
-
-    public static void C_JumpPlayerHandler(PacketSession session, IMessage packet)
-    {
-        C_JumpPlayer jumpPacket = packet as C_JumpPlayer;
-        ClientSession clientSession = session as ClientSession;
-
-        Player player = clientSession.MyPlayer;
-        if (player == null)
-            return;
-        R_Game room = clientSession.MyPlayer.Room;
-        if (room == null)
-            return;
-
-        room.Push(room.HandleJump, player, jumpPacket);
-    }
-
-    public static void C_AttackPlayerHandler(PacketSession session, IMessage packet)
-    {
-        C_AttackPlayer attackPacket = packet as C_AttackPlayer;
-        ClientSession clientSession = session as ClientSession;
-
-        Player player = clientSession.MyPlayer;
-        if (player == null)
-            return;
-        R_Game room = clientSession.MyPlayer.Room;
-        if (room == null)
-            return;
-
-        room.Push(room.HandleAttack, player, attackPacket);
-    }
 
     public static void C_ReloadPlayerHandler(PacketSession session, IMessage packet)
     {

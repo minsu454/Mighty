@@ -15,7 +15,6 @@ namespace Server
         static void Main(string[] args)
 		{
 			ConfigManager.LoadConfig();
-			DataManager.LoadData();
 
             R_Lobby room = RoomManagers.R_Lobby.Add();
 			TimeManager.AddTickRoom(room, 50);

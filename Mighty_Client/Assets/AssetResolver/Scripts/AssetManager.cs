@@ -9,6 +9,6 @@ namespace Common.AssetResolver
         public bool UseResources = false;
         public bool UseAddressables = true;
 
-        [SerializeField] public List<string> ResourcesPathList = new List<string>();
+        public List<string> ResourcesPathList = new List<string>();
     }
 }

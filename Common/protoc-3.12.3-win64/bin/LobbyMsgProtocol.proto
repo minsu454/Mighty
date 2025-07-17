@@ -69,13 +69,3 @@ message S_DisconnectPlayer
 {
 	int32 disconnectPlayerId = 1;
 }
-
-message C_JobChoice
-{
-	JobType job = 1;
-}
-
-message S_JobChoice
-{
-	JobType job = 1;
-}

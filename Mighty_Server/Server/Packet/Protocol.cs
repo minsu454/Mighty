@@ -25,21 +25,15 @@ namespace Google.Protobuf.Protocol {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cg5Qcm90b2NvbC5wcm90bxIIUHJvdG9jb2waE1VuaXR5UHJvdG9jb2wucHJv",
-            "dG8aEkdhbWVQcm90b2NvbC5wcm90byrDBAoFTXNnSWQSCwoHU19MT0dJThAA",
+            "dG8aEkdhbWVQcm90b2NvbC5wcm90byrBAgoFTXNnSWQSCwoHU19MT0dJThAA",
             "EgsKB0NfTE9HSU4QARILCgdTX0VSUk9SEAISEQoNU19FTlRFUl9MT0JCWRAK",
             "EhEKDVNfTEVBVkVfTE9CQlkQCxIRCg1DX0NSRUFURV9ST09NEAwSEQoNU19D",
             "UkVBVEVfUk9PTRANEhIKDkNfQ09OTkVDVF9ST09NEA4SEgoOU19DT05ORUNU",
             "X1JPT00QDxIQCgxDX0xFQVZFX1JPT00QEBIQCgxTX0xFQVZFX1JPT00QERIX",
-            "ChNTX0RJU0NPTk5FQ1RfUExBWUVSEBISEAoMQ19KT0JfQ0hPSUNFEBMSEAoM",
-            "U19KT0JfQ0hPSUNFEBQSEAoMQ19FTlRFUl9HQU1FEGQSEAoMU19FTlRFUl9H",
-            "QU1FEGUSEAoMU19MRUFWRV9HQU1FEGYSEwoOU19TUEFXTl9QTEFZRVIQlwES",
-            "FQoQU19ERVNQQVdOX1BMQVlFUhCYARISCg1DX01PVkVfUExBWUVSEJkBEhIK",
-            "DVNfTU9WRV9QTEFZRVIQmgESEgoNQ19KVU1QX1BMQVlFUhCbARISCg1TX0pV",
-            "TVBfUExBWUVSEJwBEhQKD0NfQVRUQUNLX1BMQVlFUhCdARIUCg9TX0FUVEFD",
-            "S19QTEFZRVIQngESFAoPQ19SRUxPQURfUExBWUVSEJ8BEhcKElNfU1BBV05f",
-            "UFJPSkVDVElMRRDIARIWChFTX01PVkVfUFJPSkVDVElMRRDJARIZChRTX0RF",
-            "U1BBV05fUFJPSkVDVElMRRDKAUIbqgIYR29vZ2xlLlByb3RvYnVmLlByb3Rv",
-            "Y29sYgZwcm90bzM="));
+            "ChNTX0RJU0NPTk5FQ1RfUExBWUVSEBISEAoMQ19FTlRFUl9HQU1FEGQSEAoM",
+            "U19FTlRFUl9HQU1FEGUSEAoMU19MRUFWRV9HQU1FEGYSEwoOU19TUEFXTl9Q",
+            "TEFZRVIQlwESFQoQU19ERVNQQVdOX1BMQVlFUhCYAUIbqgIYR29vZ2xlLlBy",
+            "b3RvYnVmLlByb3RvY29sYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.UnityProtocol.UnityProtocolReflection.Descriptor, global::Google.Protobuf.GameProtocol.GameProtocolReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Protobuf.Protocol.MsgId), }, null, null));
@@ -61,23 +55,11 @@ namespace Google.Protobuf.Protocol {
     [pbr::OriginalName("C_LEAVE_ROOM")] CLeaveRoom = 16,
     [pbr::OriginalName("S_LEAVE_ROOM")] SLeaveRoom = 17,
     [pbr::OriginalName("S_DISCONNECT_PLAYER")] SDisconnectPlayer = 18,
-    [pbr::OriginalName("C_JOB_CHOICE")] CJobChoice = 19,
-    [pbr::OriginalName("S_JOB_CHOICE")] SJobChoice = 20,
     [pbr::OriginalName("C_ENTER_GAME")] CEnterGame = 100,
     [pbr::OriginalName("S_ENTER_GAME")] SEnterGame = 101,
     [pbr::OriginalName("S_LEAVE_GAME")] SLeaveGame = 102,
     [pbr::OriginalName("S_SPAWN_PLAYER")] SSpawnPlayer = 151,
     [pbr::OriginalName("S_DESPAWN_PLAYER")] SDespawnPlayer = 152,
-    [pbr::OriginalName("C_MOVE_PLAYER")] CMovePlayer = 153,
-    [pbr::OriginalName("S_MOVE_PLAYER")] SMovePlayer = 154,
-    [pbr::OriginalName("C_JUMP_PLAYER")] CJumpPlayer = 155,
-    [pbr::OriginalName("S_JUMP_PLAYER")] SJumpPlayer = 156,
-    [pbr::OriginalName("C_ATTACK_PLAYER")] CAttackPlayer = 157,
-    [pbr::OriginalName("S_ATTACK_PLAYER")] SAttackPlayer = 158,
-    [pbr::OriginalName("C_RELOAD_PLAYER")] CReloadPlayer = 159,
-    [pbr::OriginalName("S_SPAWN_PROJECTILE")] SSpawnProjectile = 200,
-    [pbr::OriginalName("S_MOVE_PROJECTILE")] SMoveProjectile = 201,
-    [pbr::OriginalName("S_DESPAWN_PROJECTILE")] SDespawnProjectile = 202,
   }
 
   #endregion

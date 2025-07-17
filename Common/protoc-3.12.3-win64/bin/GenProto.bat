@@ -5,16 +5,16 @@ protoc.exe -I=./ --csharp_out=./ ./GameMsgProtocol.proto
 protoc.exe -I=./ --csharp_out=./ ./Protocol.proto 
 IF ERRORLEVEL 1 PAUSE
 
-START ../../../Server/PacketGenerator/bin/PacketGenerator.exe ./Protocol.proto
-XCOPY /Y Protocol.cs "../../../3DRPGGame/Assets/3DRPGGame/Scripts/Server/Packet"
-XCOPY /Y Protocol.cs "../../../Server/Server/Packet"
-XCOPY /Y LobbyMsgProtocol.cs "../../../3DRPGGame/Assets/3DRPGGame/Scripts/Server/Packet"
-XCOPY /Y LobbyMsgProtocol.cs "../../../Server/Server/Packet"
-XCOPY /Y GameMsgProtocol.cs "../../../3DRPGGame/Assets/3DRPGGame/Scripts/Server/Packet"
-XCOPY /Y GameMsgProtocol.cs "../../../Server/Server/Packet"
-XCOPY /Y UnityProtocol.cs "../../../3DRPGGame/Assets/3DRPGGame/Scripts/Server/Packet/Unity"
-XCOPY /Y UnityProtocol.cs "../../../Server/Server/Packet/Unity"
-XCOPY /Y GameProtocol.cs "../../../3DRPGGame/Assets/3DRPGGame/Scripts/Server/Packet/Unity"
-XCOPY /Y GameProtocol.cs "../../../Server/Server/Packet/Unity"
-XCOPY /Y ClientPacketManager.cs "../../../3DRPGGame/Assets/3DRPGGame/Scripts/Server/Packet"
-XCOPY /Y ServerPacketManager.cs "../../../Server/Server/Packet"
+START ../../../Mighty_Server/PacketGenerator/bin/PacketGenerator.exe ./Protocol.proto
+XCOPY /Y Protocol.cs "../../../Mighty_Client/Assets/Server/Scripts/Packet/Protocol"
+XCOPY /Y Protocol.cs "../../../Mighty_Server/Server/Packet"
+XCOPY /Y LobbyMsgProtocol.cs "../../../Mighty_Client/Assets/Server/Scripts/Packet/Protocol"
+XCOPY /Y LobbyMsgProtocol.cs "../../../Mighty_Server/Server/Packet"
+XCOPY /Y GameMsgProtocol.cs "../../../Mighty_Client/Assets/Server/Scripts/Packet/Protocol"
+XCOPY /Y GameMsgProtocol.cs "../../../Mighty_Server/Server/Packet"
+XCOPY /Y UnityProtocol.cs "../../../Mighty_Client/Assets/Server/Scripts/Packet/Protocol/Unity"
+XCOPY /Y UnityProtocol.cs "../../../Mighty_Server/Server/Packet/Unity"
+XCOPY /Y GameProtocol.cs "../../../Mighty_Client/Assets/Server/Scripts/Packet/Protocol/Unity"
+XCOPY /Y GameProtocol.cs "../../../Mighty_Server/Server/Packet/Unity"
+XCOPY /Y ClientPacketManager.cs "../../../Mighty_Client/Assets/Server/Scripts/Packet"
+XCOPY /Y ServerPacketManager.cs "../../../Mighty_Server/Server/Packet"

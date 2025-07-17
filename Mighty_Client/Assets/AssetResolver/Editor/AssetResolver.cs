@@ -30,8 +30,10 @@ namespace Common.AssetResolver
 
                 assetManager.ResourcesPathList.Add(resourcePath);
             }
-
+            
+            EditorUtility.SetDirty(assetManager);
             AssetDatabase.SaveAssets();
+            AssetDatabase.ImportAsset(AssetDatabase.GetAssetPath(assetManager));
         }
     }
 }

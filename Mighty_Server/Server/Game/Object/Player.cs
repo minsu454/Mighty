@@ -5,7 +5,7 @@ using Server.Game.CharacterClass;
 
 namespace Server.Game.Object
 {
-    public class Player : Unit
+    public class Player : GameObject
     {
         public ClientSession Session { get; set; }
         public ICharacterClass CharacterClass { get; set; }
@@ -13,8 +13,6 @@ namespace Server.Game.Object
         public Player()
         {
             Tag = ObjectTag.TagPlayer;
-
-            State = UnitStateType.StateIdle;
         }
     }
 }

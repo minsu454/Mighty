@@ -31,18 +31,8 @@ class PacketManager
 		_handler.Add((ushort)MsgId.CConnectRoom, PacketHandler.C_ConnectRoomHandler);		
 		_onRecv.Add((ushort)MsgId.CLeaveRoom, MakePacket<C_LeaveRoom>);
 		_handler.Add((ushort)MsgId.CLeaveRoom, PacketHandler.C_LeaveRoomHandler);		
-		_onRecv.Add((ushort)MsgId.CJobChoice, MakePacket<C_JobChoice>);
-		_handler.Add((ushort)MsgId.CJobChoice, PacketHandler.C_JobChoiceHandler);		
 		_onRecv.Add((ushort)MsgId.CEnterGame, MakePacket<C_EnterGame>);
-		_handler.Add((ushort)MsgId.CEnterGame, PacketHandler.C_EnterGameHandler);		
-		_onRecv.Add((ushort)MsgId.CMovePlayer, MakePacket<C_MovePlayer>);
-		_handler.Add((ushort)MsgId.CMovePlayer, PacketHandler.C_MovePlayerHandler);		
-		_onRecv.Add((ushort)MsgId.CJumpPlayer, MakePacket<C_JumpPlayer>);
-		_handler.Add((ushort)MsgId.CJumpPlayer, PacketHandler.C_JumpPlayerHandler);		
-		_onRecv.Add((ushort)MsgId.CAttackPlayer, MakePacket<C_AttackPlayer>);
-		_handler.Add((ushort)MsgId.CAttackPlayer, PacketHandler.C_AttackPlayerHandler);		
-		_onRecv.Add((ushort)MsgId.CReloadPlayer, MakePacket<C_ReloadPlayer>);
-		_handler.Add((ushort)MsgId.CReloadPlayer, PacketHandler.C_ReloadPlayerHandler);
+		_handler.Add((ushort)MsgId.CEnterGame, PacketHandler.C_EnterGameHandler);
 	}
 
 	public void OnRecvPacket(PacketSession session, ArraySegment<byte> buffer)

@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UseResources: 1
   UseAddressables: 1
-  resourcesPathList:
-  - Assets/Resources/Auto/Built In
-  - Assets/Resources/Auto/Built In/AudioMixer.mixer
-  - Assets/Resources/Auto/Built In/SoundPlayer.prefab
+  ResourcesPathList:
+  - Built In/AudioMixer
+  - Built In/SoundPlayer

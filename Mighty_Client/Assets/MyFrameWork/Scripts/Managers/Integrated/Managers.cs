@@ -28,7 +28,7 @@ public sealed class Managers : MonoBehaviour
         instance.soundManager = CreateManager<SoundManager>(go.transform);
 
         SceneJobLoader.Init();
-        Network.Init();
+        //Network.Init();
     }
 
     /// <summary>

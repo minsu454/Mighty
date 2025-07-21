@@ -2,7 +2,8 @@ namespace Playing_Card
 {
     public enum Suit
     {
-        Spade = 0,
+        None = 0,
+        Spade,
         Heart,
         Diamond,
         Club,
